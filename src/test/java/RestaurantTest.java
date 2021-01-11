@@ -53,4 +53,12 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    //This is to test whether the method totalValueofOrder is giving correct output
+    @Test
+    public void selecting_two_items_priced_119_and_269_then_return_total_value_will_be_388() {
+
+        int value = restaurant.totalValueofOrder("Sweet corn soup","Vegetable lasagne");
+        assetEquals(388,value);
+    }
 }
