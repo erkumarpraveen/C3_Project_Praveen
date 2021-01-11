@@ -34,6 +34,17 @@ public class Restaurant {
         }
         return null;
     }
+    //This method is to calculate the total value of the order
+    public int totalValueOfOrder(String... itemNames)
+    {
+        int amount = 0;
+        for(int i=0;i<itemNames.length;i++)
+        {
+            Item item = findItemByName(itemNames[i]);
+            amount = amount + item.getPrice();
+        }
+        return amount;
+    }
 
     public void addToMenu(String name, int price) {
         Item newItem = new Item(name,price);
